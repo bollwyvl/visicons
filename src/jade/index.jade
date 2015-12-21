@@ -1,0 +1,60 @@
+doctype html
+html
+  head
+    title= pkg.name + "—" + pkg.description
+    style: :stylus
+      @import "https://fonts.googleapis.com/css?family=Dosis:400,700|Open+Sans"
+      @import "./css/visicons.css"
+      body
+        font-family "Open Sans"
+        margin 0
+        padding 0
+
+      h1, h2
+        font-family Dosis
+        margin 0
+        padding 0
+      
+      h1
+        font-size 82px
+        text-align center
+      
+      header
+        background-color black
+        color white
+        text-align center
+        margin 0
+        padding 32px
+      
+      ul, ul li
+        list-style none
+        
+      ul
+        display flex
+        flex-wrap wrap
+        justify-content space-between
+      
+      ul li
+        flex 1
+        text-align center
+      
+      .label
+        opacity 0.25
+
+  body
+    header
+      h1= pkg.name
+      h2= pkg.description
+    ul
+      each glyph in font.glyphs
+        li
+          i(class=[
+              pkg.iconfontCss.className,
+              pkg.iconfontCss.className + "-2x",
+              pkg.iconfontCss.className + "-" + glyph.name
+            ])
+          p
+            span.label visi-
+            span= glyph.name
+        
+    
