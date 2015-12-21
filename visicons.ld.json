@@ -1,21 +1,51 @@
 {
   "glyphs": [
     {
-      "name": "x-axis",
+      "name": "axis-x",
       "unicode": [
         ""
       ]
     },
     {
-      "name": "y-axis",
+      "name": "axis-y",
       "unicode": [
         ""
+      ]
+    },
+    {
+      "name": "layout-treemap",
+      "unicode": [
+        ""
+      ]
+    },
+    {
+      "name": "layout-force-directed",
+      "unicode": [
+        ""
+      ]
+    },
+    {
+      "name": "layout-tree",
+      "unicode": [
+        ""
+      ]
+    },
+    {
+      "name": "scale-linear",
+      "unicode": [
+        ""
+      ]
+    },
+    {
+      "name": "scale-log",
+      "unicode": [
+        ""
       ]
     }
   ],
   "options": {
     "fontName": "visicons",
-    "timestamp": 1450720326,
+    "timestamp": 1450724652,
     "formats": [
       "ttf",
       "eot",
