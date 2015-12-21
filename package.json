@@ -1,0 +1,19 @@
+{
+  "name": "visicons",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel": "^6.3.13",
+    "babel-core": "^6.3.21",
+    "babel-preset-es2015": "^6.3.13",
+    "gulp": "^3.9.0",
+    "gulp-cli": "^1.0.0",
+    "gulp-iconfont": "^5.0.1"
+  }
+}
