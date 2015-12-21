@@ -30,6 +30,7 @@ bower install visicons
 ## Developing
 
 ```shell
+git submodule update --init
 npm install
 npm run gulp
 ```
