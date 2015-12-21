@@ -1,0 +1,38 @@
+
+@font-face {
+  font-family: "visicons";
+  src: url('../fonts/visicons.eot');
+  src: url('../fonts/visicons.eot?#iefix') format('eot'),
+    url('../fonts/visicons.woff') format('woff'),
+    url('../fonts/visicons.ttf') format('truetype'),
+    url('../fonts/visicons.svg#visicons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.visi:before {
+  display: inline-block;
+  font-family: "visicons";
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.visi-lg {
+  font-size: 1.3333333333333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.visi-2x { font-size: 2em; }
+.visi-3x { font-size: 3em; }
+.visi-4x { font-size: 4em; }
+.visi-5x { font-size: 5em; }
+.visi-fw {
+  width: 1.2857142857142858em;
+  text-align: center;
+}
+
+.visi-x-axis:before { content: "\EA01" }
+.visi-y-axis:before { content: "\EA02" }

@@ -1,0 +1,39 @@
+{
+  "glyphs": [
+    {
+      "name": "x-axis",
+      "unicode": [
+        ""
+      ]
+    },
+    {
+      "name": "y-axis",
+      "unicode": [
+        ""
+      ]
+    }
+  ],
+  "options": {
+    "fontName": "visicons",
+    "timestamp": 1450720326,
+    "formats": [
+      "ttf",
+      "eot",
+      "woff",
+      "woff2",
+      "svg"
+    ],
+    "appendUnicode": true,
+    "normalize": true,
+    "autohint": false,
+    "ignoreExt": false,
+    "startUnicode": 59905,
+    "fileName": "visicons",
+    "fontId": "visicons",
+    "fixedWidth": false,
+    "descent": 0,
+    "round": 10000000000000,
+    "metadata": "",
+    "ascent": 1024
+  }
+}

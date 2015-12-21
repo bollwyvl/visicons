@@ -1,0 +1,78 @@
+<!DOCTYPE html><html><head><title>visicons—nice icons for showing data about data</title><style>@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css";
+@import "https://fonts.googleapis.com/css?family=Dosis:400,700|Open+Sans";
+@import "./css/visicons.css";
+body {
+  font-family: "Open Sans";
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2 {
+  font-family: Dosis;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  font-size: 82px;
+  text-align: center;
+}
+header {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  margin: 0;
+  padding: 32px;
+}
+.menu {
+  position: absolute;
+  right: 32px;
+  top: 0;
+  list-style: none;
+}
+.menu li {
+  list-style: none;
+}
+.menu li a {
+  color: #fff;
+}
+.glyphs {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.glyphs li {
+  list-style: none;
+  flex: 1;
+  text-align: center;
+}
+.label {
+  opacity: 0.25;
+}
+input {
+  width: 90%;
+  font-size: 32px;
+  text-align: center;
+  display: block;
+  margin: 32px auto 32px auto;
+  font-family: "Open Sans";
+  border: none;
+  background-color: #ddd;
+  color: #000;
+}
+</style></head><body><header><ul class="menu"><li><a href="https://github.com/bollwyvl/visicons.git"><i class="fa fa-github fa-2x"></i></a></li></ul><h1>visicons</h1><h2>nice icons for showing data about data</h2></header><input id="search" placeholder="Filter by Name"><ul class="glyphs"><li><i class="visi visi-2x visi-x-axis"></i><p><span class="label">visi-</span><span class="name">x-axis</span></p></li><li><i class="visi visi-2x visi-y-axis"></i><p><span class="label">visi-</span><span class="name">y-axis</span></p></li></ul><script src="//cdn.jsdelivr.net/g/d3js"></script><script>var glyph = d3.selectAll(".glyphs li")
+  .each(function(){
+    var it = d3.select(this);
+    // a little bit of abuse...
+    it.datum({name: it.select(".name").text()})
+  }),
+  search = d3.select("#search");
+
+search.on("keyup", function(){
+  var q = search.property("value");
+  glyph.style({
+    display: function(d){
+      return d.name.indexOf(q) === -1 ? "none" : "inline";
+    }
+  });
+})</script></body></html>
