@@ -32,7 +32,7 @@ gulp.task("fonts", () => {
       gulp.src('./src/css/visicons.css')
         .pipe(consolidate('lodash', _.extend({
           fontName: pkg.name,
-          glyphs: glyphs
+          glyphs: _.sortBy(glyphs, "name")
         }, pkg.iconfontCss)))
         .pipe(gulp.dest('./dist/css/'));
     })
@@ -42,6 +42,8 @@ gulp.task("fonts", () => {
 
 gulp.task("docs", function() {
   let font = JSON.parse(fs.readFileSync(LD));
+
+  font.glyphs = _.sortBy(font.glyphs, "name");
 
   gulp.src("./src/jade/*.jade")
     .pipe(jade({

@@ -23,9 +23,11 @@ bower install visicons
   - [x] x-axis
   - [x] y-axis
   - [ ] scale
+    - [x] linear
+    - [x] log
 - [ ] layout
-  - [ ] treemap
-  - [ ] force-directed
+  - [x] treemap
+  - [x] force-directed
 
 ## Developing
 
