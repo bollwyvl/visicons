@@ -1,5 +1,5 @@
 # visicons
-> nice icons for data visualization
+> nice icons for showing data about data
 
 So you're building a visualization builder, and want your user
 - to be able to create linked scales in two axes

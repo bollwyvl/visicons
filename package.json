@@ -1,15 +1,23 @@
 {
   "name": "visicons",
   "version": "1.0.0",
-  "description": "nice icons for data visualization",
+  "description": "nice icons for showing data about data",
   "main": "index.js",
   "scripts": {
     "gulp": "gulp",
     "fonts": "gulp fonts",
     "docs": "gulp docs"
   },
-  "author": "",
-  "license": "ISC",
+  "author": {
+    "name" : "Nicholas Bollweg",
+    "url" : "https://github.com/bollwyvl"
+  },
+  "homepage": "https://bollwyvl.github.io/visicons",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/bollwyvl/visicons.git"
+  },
+  "license": "BSD-3-Clause",
   "devDependencies": {
     "babel": "^6.3.13",
     "babel-core": "^6.3.21",

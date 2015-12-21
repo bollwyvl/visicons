@@ -3,6 +3,7 @@ html
   head
     title= pkg.name + "—" + pkg.description
     style: :stylus
+      @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css";
       @import "https://fonts.googleapis.com/css?family=Dosis:400,700|Open+Sans"
       @import "./css/visicons.css"
       body
@@ -26,26 +27,53 @@ html
         margin 0
         padding 32px
       
-      ul, ul li
+      .menu
+        position absolute
+        right 32px
+        top 0
         list-style none
         
-      ul
+        li
+          list-style none
+          
+          a
+            color white
+      
+      .glyphs
+        list-style none
         display flex
         flex-wrap wrap
         justify-content space-between
-      
-      ul li
-        flex 1
-        text-align center
-      
+        
+        li
+          list-style none
+          flex 1
+          text-align center
+        
       .label
         opacity 0.25
+      
+      input
+        width 90%
+        font-size 32px
+        text-align center
+        display block
+        margin 32px auto 32px auto
+        font-family "Open Sans"
+        border none
+        background-color #ddd
+        color black
 
   body
     header
+      ul.menu
+        li: a(href=pkg.repository.url): i.fa.fa-github.fa-2x
       h1= pkg.name
       h2= pkg.description
-    ul
+
+    input#search(placeholder="Filter by Name")
+      
+    ul.glyphs
       each glyph in font.glyphs
         li
           i(class=[
@@ -55,6 +83,23 @@ html
             ])
           p
             span.label visi-
-            span= glyph.name
+            span.name= glyph.name
         
-    
+    script(src="//cdn.jsdelivr.net/g/d3js")
+    script.
+      var glyph = d3.selectAll(".glyphs li")
+        .each(function(){
+          var it = d3.select(this);
+          // a little bit of abuse...
+          it.datum({name: it.select(".name").text()})
+        }),
+        search = d3.select("#search");
+      
+      search.on("keyup", function(){
+        var q = search.property("value");
+        glyph.style({
+          display: function(d){
+            return d.name.indexOf(q) === -1 ? "none" : "inline";
+          }
+        });
+      })
