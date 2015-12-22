@@ -2,12 +2,13 @@ doctype html
 html
   head
     title= pkg.name + "—" + pkg.description
+    meta(name="viewport", content="width=device-width,initial-scale=1")
     style: :stylus
       @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css";
-      @import "https://fonts.googleapis.com/css?family=Dosis:400,700|Open+Sans"
-      @import "./css/visicons.css"
+      @import "https://fonts.googleapis.com/css?family=Dosis:100,400,700|Open+Sans"
+      @import "./visicons/css/visicons.css"
       body
-        font-family "Open Sans"
+        font-family "Open Sans", sans-serif
         margin 0
         padding 0
 
@@ -16,15 +17,33 @@ html
         margin 0
         padding 0
       
+      a
+        text-decoration none
+        border-bottom dotted 1px #ddd
+        color #ddd
+      
       h1
         font-size 82px
         text-align center
+        font-weight 100
       
-      header
-        background-color black
+      .sidebar
+        background-color #222
         color white
         text-align center
-        margin 0
+        top 0
+        left 0
+        bottom 0
+        padding 32px
+        position fixed
+        overflow-y auto
+        width 400px
+      
+      .main
+        margin-left 464px
+      
+      footer
+        text-align center
         padding 32px
       
       .menu
@@ -49,6 +68,7 @@ html
           list-style none
           flex 1
           text-align center
+          min-width 100px
         
       .label
         opacity 0.25
@@ -63,27 +83,83 @@ html
         border none
         background-color #ddd
         color black
+      
+      pre
+        background-color black
+        width 100%
+        display block
+        padding 5px
+        color #0f0
 
   body
-    header
-      ul.menu
-        li: a(href=pkg.repository.url): i.fa.fa-github.fa-2x
-      h1= pkg.name
-      h2= pkg.description
+    .sidebar
+      header
+        ul.menu
+          li: a(href=pkg.repository.url): i.fa.fa-github.fa-2x
+        h1= pkg.name
+        h2= pkg.description
+        p: :marked
+          ### [download visicons](https://github.com/bollwyvl/visicons/archive/gh-pages.zip)
+        
+          ### include the style
+          ```html
+          <style>@import("visicons/css/visicons.css")</style>
+          ```
+          
+          ### make some icons
+          ```html
+          <i class="visi visi-layout-treemap"></i>
+          ```
+          > <i class="visi visi-layout-treemap"></i>
 
-    input#search(placeholder="Filter by Name")
-      
-    ul.glyphs
-      each glyph in font.glyphs
-        li
-          i(class=[
-              pkg.iconfontCss.className,
-              pkg.iconfontCss.className + "-2x",
-              pkg.iconfontCss.className + "-" + glyph.name
-            ])
-          p
-            span.label visi-
-            span.name= glyph.name
+          ### apply special classes
+          ```html
+          <i class="visi visi-layout-treemap visi-2x"></i>
+          ```
+          > <i class="visi visi-layout-treemap visi-2x"></i>
+
+          ### works with [FontAwesome][]
+          [FontAwesome]: https://fortawesome.github.io/Font-Awesome/examples/
+          ```html
+          <i class="visi visi-layout-treemap fa fa-spin"></i>
+          ```
+          > <i class="visi visi-layout-treemap fa fa-spin"></i>
+
+          ```html
+          <span class="fa-stack fa-lg">
+            <i class="visi visi-layout-treemap fa-stack-2x">
+              </i>
+            <i class="fa fa-ban fa-stack-2x text-danger">
+              </i>
+          </span>
+          ```
+          > <span class="fa-stack fa-lg">
+          >   <i class="visi visi-layout-treemap"></i>
+          >   <i class="fa fa-ban fa-stack-2x" style="color: red;"></i>
+          > </span>
+          
+      footer
+        p
+          span= "© 2015 " + pkg.name + " "
+          a(href="./CONTRIBUTORS") contributors
+        p
+          span= pkg.name + " is " 
+          a(href="./LICENSE")= " free software "
+        
+    .main
+      input#search(placeholder="Filter by Name")
+        
+      ul.glyphs
+        each glyph in font.glyphs
+          li
+            i(class=[
+                pkg.iconfontCss.className,
+                pkg.iconfontCss.className + "-2x",
+                pkg.iconfontCss.className + "-" + glyph.name
+              ])
+            p
+              span.label visi-
+              span.name= glyph.name
         
     script(src="//cdn.jsdelivr.net/g/d3js")
     script.

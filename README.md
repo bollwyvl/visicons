@@ -20,14 +20,21 @@ bower install visicons
 
 ## Icon Roadmap
 - [ ] mark
-  - [x] x-axis
-  - [x] y-axis
+  - [x] axis
+    - [x] x-axis
+    - [x] y-axis
   - [ ] scale
     - [x] linear
     - [x] log
+    - [ ] ordinal
+    - [x] color
+    - [ ] time
+  - [ ] icon
 - [ ] layout
   - [x] treemap
   - [x] force-directed
+  - [ ] chord
+  - [ ] sankey
 
 ## Developing
 

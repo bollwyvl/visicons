@@ -6,16 +6,18 @@
   "scripts": {
     "gulp": "gulp",
     "fonts": "gulp fonts",
-    "docs": "gulp docs"
+    "docs": "gulp docs",
+    "copy": "gulp copy",
+    "watch": "gulp watch"
   },
   "author": {
-    "name" : "Nicholas Bollweg",
-    "url" : "https://github.com/bollwyvl"
+    "name": "Nicholas Bollweg",
+    "url": "https://github.com/bollwyvl"
   },
   "homepage": "https://bollwyvl.github.io/visicons",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/bollwyvl/visicons.git"
+    "type": "git",
+    "url": "https://github.com/bollwyvl/visicons.git"
   },
   "license": "BSD-3-Clause",
   "devDependencies": {
@@ -28,13 +30,23 @@
     "gulp-iconfont": "^5.0.1",
     "gulp-jade": "^1.1.0",
     "gulp-less": "^3.0.5",
+    "gulp-plumber": "^1.0.1",
     "gulp-watch": "^4.3.5",
+    "jstransformer-marked": "^1.0.1",
     "jstransformer-stylus": "^1.0.0",
+    "jstransformer-verbatim": "^1.0.0",
     "lodash": "^3.10.1",
+    "marked": "^0.3.5",
     "stylus": "^0.53.0"
   },
   "iconfont": {
-    "formats": ["ttf", "eot", "woff", "woff2", "svg"],
+    "formats": [
+      "ttf",
+      "eot",
+      "woff",
+      "woff2",
+      "svg"
+    ],
     "appendUnicode": true,
     "normalize": true
   },
