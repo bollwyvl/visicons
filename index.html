@@ -1,8 +1,8 @@
-<!DOCTYPE html><html><head><title>visicons—nice icons for showing data about data</title><style>@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css";
-@import "https://fonts.googleapis.com/css?family=Dosis:400,700|Open+Sans";
-@import "./css/visicons.css";
+<!DOCTYPE html><html><head><title>visicons—nice icons for showing data about data</title><meta name="viewport" content="width=device-width,initial-scale=1"><style>@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css";
+@import "https://fonts.googleapis.com/css?family=Dosis:100,400,700|Open+Sans";
+@import "./visicons/css/visicons.css";
 body {
-  font-family: "Open Sans";
+  font-family: "Open Sans", sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -12,15 +12,33 @@ h2 {
   margin: 0;
   padding: 0;
 }
+a {
+  text-decoration: none;
+  border-bottom: dotted 1px #ddd;
+  color: #ddd;
+}
 h1 {
   font-size: 82px;
   text-align: center;
+  font-weight: 100;
 }
-header {
-  background-color: #000;
+.sidebar {
+  background-color: #222;
   color: #fff;
   text-align: center;
-  margin: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  padding: 32px;
+  position: fixed;
+  overflow-y: auto;
+  width: 400px;
+}
+.main {
+  margin-left: 464px;
+}
+footer {
+  text-align: center;
   padding: 32px;
 }
 .menu {
@@ -45,6 +63,7 @@ header {
   list-style: none;
   flex: 1;
   text-align: center;
+  min-width: 100px;
 }
 .label {
   opacity: 0.25;
@@ -60,7 +79,49 @@ input {
   background-color: #ddd;
   color: #000;
 }
-</style></head><body><header><ul class="menu"><li><a href="https://github.com/bollwyvl/visicons.git"><i class="fa fa-github fa-2x"></i></a></li></ul><h1>visicons</h1><h2>nice icons for showing data about data</h2></header><input id="search" placeholder="Filter by Name"><ul class="glyphs"><li><i class="visi visi-2x visi-axis-x"></i><p><span class="label">visi-</span><span class="name">axis-x</span></p></li><li><i class="visi visi-2x visi-axis-y"></i><p><span class="label">visi-</span><span class="name">axis-y</span></p></li><li><i class="visi visi-2x visi-layout-force-directed"></i><p><span class="label">visi-</span><span class="name">layout-force-directed</span></p></li><li><i class="visi visi-2x visi-layout-tree"></i><p><span class="label">visi-</span><span class="name">layout-tree</span></p></li><li><i class="visi visi-2x visi-layout-treemap"></i><p><span class="label">visi-</span><span class="name">layout-treemap</span></p></li><li><i class="visi visi-2x visi-scale-linear"></i><p><span class="label">visi-</span><span class="name">scale-linear</span></p></li><li><i class="visi visi-2x visi-scale-log"></i><p><span class="label">visi-</span><span class="name">scale-log</span></p></li></ul><script src="//cdn.jsdelivr.net/g/d3js"></script><script>var glyph = d3.selectAll(".glyphs li")
+pre {
+  background-color: #000;
+  width: 100%;
+  display: block;
+  padding: 5px;
+  color: #0f0;
+}
+</style></head><body><div class="sidebar"><header><ul class="menu"><li><a href="https://github.com/bollwyvl/visicons.git"><i class="fa fa-github fa-2x"></i></a></li></ul><h1>visicons</h1><h2>nice icons for showing data about data</h2><p><h3 id="-download-visicons-https-github-com-bollwyvl-visicons-archive-gh-pages-zip-"><a href="https://github.com/bollwyvl/visicons/archive/gh-pages.zip">download visicons</a></h3>
+<h3 id="include-the-style">include the style</h3>
+<pre><code class="lang-html">&lt;style&gt;@import(&quot;visicons/css/visicons.css&quot;)&lt;/style&gt;
+</code></pre>
+<h3 id="make-some-icons">make some icons</h3>
+<pre><code class="lang-html">&lt;i class=&quot;visi visi-layout-treemap&quot;&gt;&lt;/i&gt;
+</code></pre>
+<blockquote>
+<p><i class="visi visi-layout-treemap"></i></p>
+</blockquote>
+<h3 id="apply-special-classes">apply special classes</h3>
+<pre><code class="lang-html">&lt;i class=&quot;visi visi-layout-treemap visi-2x&quot;&gt;&lt;/i&gt;
+</code></pre>
+<blockquote>
+<p><i class="visi visi-layout-treemap visi-2x"></i></p>
+</blockquote>
+<h3 id="works-with-fontawesome-">works with <a href="https://fortawesome.github.io/Font-Awesome/examples/">FontAwesome</a></h3>
+<pre><code class="lang-html">&lt;i class=&quot;visi visi-layout-treemap fa fa-spin&quot;&gt;&lt;/i&gt;
+</code></pre>
+<blockquote>
+<p><i class="visi visi-layout-treemap fa fa-spin"></i></p>
+</blockquote>
+<pre><code class="lang-html">&lt;span class=&quot;fa-stack fa-lg&quot;&gt;
+  &lt;i class=&quot;visi visi-layout-treemap fa-stack-2x&quot;&gt;
+    &lt;/i&gt;
+  &lt;i class=&quot;fa fa-ban fa-stack-2x text-danger&quot;&gt;
+    &lt;/i&gt;
+&lt;/span&gt;
+</code></pre>
+<blockquote>
+<p><span class="fa-stack fa-lg">
+  <i class="visi visi-layout-treemap"></i>
+  <i class="fa fa-ban fa-stack-2x" style="color: red;"></i>
+</span></p>
+</blockquote>
+</p></header><footer><p><span>© 2015 visicons </span><a href="./CONTRIBUTORS">contributors</a></p><p><span>visicons is </span><a href="./LICENSE"> free software </a></p></footer></div><div class="main"><input id="search" placeholder="Filter by Name"><ul class="glyphs"><li><i class="visi visi-2x visi-axis"></i><p><span class="label">visi-</span><span class="name">axis</span></p></li><li><i class="visi visi-2x visi-axis-x"></i><p><span class="label">visi-</span><span class="name">axis-x</span></p></li><li><i class="visi visi-2x visi-axis-y"></i><p><span class="label">visi-</span><span class="name">axis-y</span></p></li><li><i class="visi visi-2x visi-layout-force-directed"></i><p><span class="label">visi-</span><span class="name">layout-force-directed</span></p></li><li><i class="visi visi-2x visi-layout-tree"></i><p><span class="label">visi-</span><span class="name">layout-tree</span></p></li><li><i class="visi visi-2x visi-layout-treemap"></i><p><span class="label">visi-</span><span class="name">layout-treemap</span></p></li><li><i class="visi visi-2x visi-scale-color"></i><p><span class="label">visi-</span><span class="name">scale-color</span></p></li><li><i class="visi visi-2x visi-scale-linear"></i><p><span class="label">visi-</span><span class="name">scale-linear</span></p></li><li><i class="visi visi-2x visi-scale-log"></i><p><span class="label">visi-</span><span class="name">scale-log</span></p></li></ul></div><script src="//cdn.jsdelivr.net/g/d3js"></script><script>var glyph = d3.selectAll(".glyphs li")
   .each(function(){
     var it = d3.select(this);
     // a little bit of abuse...

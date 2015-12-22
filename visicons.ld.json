@@ -41,11 +41,23 @@
       "unicode": [
         ""
       ]
+    },
+    {
+      "name": "scale-color",
+      "unicode": [
+        ""
+      ]
+    },
+    {
+      "name": "axis",
+      "unicode": [
+        ""
+      ]
     }
   ],
   "options": {
     "fontName": "visicons",
-    "timestamp": 1450724652,
+    "timestamp": 1450798447,
     "formats": [
       "ttf",
       "eot",

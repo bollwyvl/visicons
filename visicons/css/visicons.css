@@ -34,10 +34,12 @@
   text-align: center;
 }
 
+.visi-axis:before { content: "\EA09" }
 .visi-axis-x:before { content: "\EA01" }
 .visi-axis-y:before { content: "\EA02" }
 .visi-layout-force-directed:before { content: "\EA04" }
 .visi-layout-tree:before { content: "\EA05" }
 .visi-layout-treemap:before { content: "\EA03" }
+.visi-scale-color:before { content: "\EA08" }
 .visi-scale-linear:before { content: "\EA06" }
 .visi-scale-log:before { content: "\EA07" }
