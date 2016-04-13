@@ -35,6 +35,11 @@ bower install visicons
   - [x] force-directed
   - [ ] chord
   - [ ] sankey
+  - [ ] constraint
+    - [ ] align vertical
+    - [ ] align horizontal
+    - [ ] group box
+    - [ ] group convex hull
 
 ## Developing
 
