@@ -53,11 +53,41 @@
       "unicode": [
         ""
       ]
+    },
+    {
+      "name": "constraint",
+      "unicode": [
+        ""
+      ]
+    },
+    {
+      "name": "constraint-h",
+      "unicode": [
+        ""
+      ]
+    },
+    {
+      "name": "constraint-v",
+      "unicode": [
+        ""
+      ]
+    },
+    {
+      "name": "constraint-group-box",
+      "unicode": [
+        ""
+      ]
+    },
+    {
+      "name": "constraint-convex-hull",
+      "unicode": [
+        ""
+      ]
     }
   ],
   "options": {
     "fontName": "visicons",
-    "timestamp": 1450798447,
+    "timestamp": 1460610180,
     "formats": [
       "ttf",
       "eot",

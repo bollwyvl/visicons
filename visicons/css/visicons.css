@@ -37,6 +37,11 @@
 .visi-axis:before { content: "\EA09" }
 .visi-axis-x:before { content: "\EA01" }
 .visi-axis-y:before { content: "\EA02" }
+.visi-constraint:before { content: "\EA0A" }
+.visi-constraint-convex-hull:before { content: "\EA0E" }
+.visi-constraint-group-box:before { content: "\EA0D" }
+.visi-constraint-h:before { content: "\EA0B" }
+.visi-constraint-v:before { content: "\EA0C" }
 .visi-layout-force-directed:before { content: "\EA04" }
 .visi-layout-tree:before { content: "\EA05" }
 .visi-layout-treemap:before { content: "\EA03" }
